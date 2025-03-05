@@ -1,0 +1,164 @@
+{
+  "header": {
+    "nav": {
+      "partner": "Let's partner",
+      "documentation": "Integration API"
+    },
+    "auth": {
+      "login": "Log in",
+      "signup": "Sign up"
+    }
+  },
+  "hero": {
+    "title": {
+      "part1": "The Smarter",
+      "part2": "Way to",
+      "part3": "Manage",
+      "part4": "Your Payments"
+    },
+    "description": "At Payzln, we understand that managing payments can be complex and time-consuming. That's why we've built a payment gateway that seamlessly processes payments, giving you the freedom to focus on what matters most – growing your business.",
+    "cta": "Contact Us",
+    "notification": {
+      "greeting": "Hey Tanya,",
+      "message": "We hope you're loving the product treatment toner! It's time to buy the product with an exclusive discount for you",
+      "cta": "Buy Now"
+    },
+    "badge": "Payzln payment gateway"
+  },
+  "features": {
+    "items": {
+      "money": "Manage your money your way",
+      "insights": "Insight to power your business",
+      "integration": "Easy integration to go live in minutes",
+      "flexibility": "Total flexibility in payment modes"
+    }
+  },
+  "empowerment": {
+    "title": "Empowering Businesses Worldwide",
+    "description": "Pay Zillion is designed to facilitate payments between end-users and merchants. Our mission is to make payments accessible and seamless for businesses of all sizes, no matter where they operate."
+  },
+  "paymentOptions": {
+    "items": {
+      "methods": {
+        "title": "Wide range of payment methods",
+        "description": "From traditional options like UPI, Bank Transfer (IMPS, NEFT, RTGS) to cutting-edge solutions like Fiat to Crypto and Crypto to Fiat."
+      },
+      "custom": {
+        "title": "Customized Payment Options",
+        "description": "Customize your payment options to suit your unique business needs and comply with local regulations."
+      },
+      "offers": {
+        "title": "Setup Offer",
+        "description": "Create offers and No-Cost EMI options easily."
+      },
+      "international": {
+        "title": "Accept International Payments",
+        "description": "Tap into global markets with ease, with the best curated international payments systems."
+      }
+    }
+  },
+  "stats": {
+    "items": {
+      "merchants": {
+        "prefix": "",
+        "value": "27",
+        "suffix": "+",
+        "label": "Merchants",
+        "description": "Trusted by over 25 merchants worldwide and growing!"
+      },
+      "transactions": {
+        "prefix": "$",
+        "value": "2.4",
+        "suffix": "M+",
+        "label": "Million transaction",
+        "description": "Processing millions in transactions monthly"
+      },
+      "crypto": {
+        "prefix": "€",
+        "value": "1.2",
+        "suffix": "B+",
+        "label": "Billion in Crypto",
+        "description": "Handling more than €1B in crypto transactions monthly"
+      }
+    },
+    "cta": "Contact Us"
+  },
+  "customers": {
+    "title": "Your Customers First",
+    "description": "Because your customers deserve a seamless payment process, and you deserve one less thing to worry about.",
+    "features": {
+      "money": "On-time, risk-free settlement process",
+      "links": "Flexible payment link creation",
+      "options": "Choice from a multitude of payment options"
+    }
+  },
+  "suiteSpot": {
+    "title": "Your Suite Spot",
+    "description": "When you partner with PayZln, you gain access to a powerful suite of tools and features designed to help your business thrive.",
+    "features": {
+      "pos": "POS Billing Software for smart retail management",
+      "app": "PayZln Gateway for Business App for on-the-go control",
+      "gateway": "Business Gateway for simplified management",
+      "international": "Choose from the best International Payments Stack",
+      "analytics": "Advanced Analytics and Reporting for data-driven insights"
+    }
+  },
+  "goLive": {
+    "title": "Go Live in Minutes!",
+    "description": "With easy integration, take your payments live in minutes! Sign up for a smarter way to manage your payments.",
+    "features": {
+      "suite": {
+        "title": "Access to the",
+        "subtitle": "entire product suite"
+      },
+      "onboarding": {
+        "title": "Quick",
+        "subtitle": "onboarding"
+      },
+      "options": {
+        "title": "Choice from a",
+        "subtitle": "multitude of payment options"
+      },
+      "support": {
+        "title": "24×7",
+        "subtitle": "support"
+      }
+    },
+    "checklist": {
+      "title": "Quick Onboarding Checklist",
+      "items": {
+        "account": "Create an account",
+        "verify": "Verify your business",
+        "setup": "Set up payment methods",
+        "integrate": "Integrate API",
+        "test": "Test transactions",
+        "live": "Go live"
+      }
+    }
+  },
+  "footer": {
+    "description": "The smarter way to manage your payments. Seamlessly process payments and focus on growing your business.",
+    "quickLinks": "Quick Links",
+    "links": {
+      "about": "About Us",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest updates and offers.",
+      "placeholder": "Your email address",
+      "success": "Thank you for subscribing!",
+      "contact": "Contact us:"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文"
+  }
+}

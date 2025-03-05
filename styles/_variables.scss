@@ -1,0 +1,43 @@
+// Import theme variables
+@import 'theme';
+
+// Re-export commonly used values for backward compatibility
+$primary: var(--color-primary);
+$primary-dark: var(--color-primary-dark);
+$black: var(--color-black);
+$white: var(--color-white);
+
+// Typography
+$font-family: var(--font-family-base);
+$font-size-base: var(--font-size-base);
+$font-size-lg: var(--font-size-lg);
+$font-size-xl: var(--font-size-xl);
+$font-size-2xl: var(--font-size-2xl);
+$font-size-3xl: var(--font-size-3xl);
+$font-size-4xl: var(--font-size-4xl);
+
+// Spacing
+$spacing-4: var(--spacing-4);
+$spacing-6: var(--spacing-6);
+$spacing-8: var(--spacing-8);
+$spacing-12: var(--spacing-12);
+$spacing-16: var(--spacing-16);
+$spacing-20: var(--spacing-20);
+
+// Border Radius
+$border-radius: var(--radius-base);
+$border-radius-lg: var(--radius-lg);
+$border-radius-xl: var(--radius-xl);
+$border-radius-2xl: var(--radius-2xl);
+$border-radius-full: var(--radius-full);
+
+// Transitions
+$transition-base: var(--transition-base);
+
+// Shadows
+$shadow-lg: var(--shadow-lg);
+$shadow-xl: var(--shadow-xl);
+
+// Z-index
+$z-index-sticky: var(--z-index-sticky);
+$z-index-dropdown: var(--z-index-dropdown);

@@ -1,0 +1,77 @@
+@import "theme";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "hero";
+@import "empowerment";
+@import "payment-options";
+@import "customers";
+@import "stats";
+@import "suite-spot";
+@import "go-live";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: map-get(map-get($typography, "family"), "base");
+  color: color("neutral", "black");
+  background-color: color("neutral", "white");
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  @include container;
+}
+
+.section {
+  padding: #{spacing("20")} 0;
+}
+
+// Typography Classes
+.heading-1 {
+  @include heading-1;
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+.heading-3 {
+  @include heading-3;
+}
+
+.body-text {
+  @include body-text;
+}
+
+// Button Classes
+.button-primary {
+  @include button-primary;
+}
+
+.button-secondary {
+  @include button-secondary;
+}
+
+// Animation Classes
+.fade-in {
+  @include fade-in;
+}
+
+.slide-up {
+  @include slide-up;
+}

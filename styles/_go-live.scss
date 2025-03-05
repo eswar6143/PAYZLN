@@ -1,0 +1,235 @@
+@import 'theme';
+
+.go-live {
+  padding: #{spacing('20')} 0;
+  background-color: #FFF1F1;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: #{spacing('8')};
+    
+    @include desktop {
+      grid-template-columns: 3fr 2fr;
+      gap: #{spacing('12')};
+      align-items: start;
+    }
+  }
+
+  .left-content {
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: #{font-size('4xl')};
+    font-weight: #{font-weight('extrabold')};
+    color: color('primary');
+    margin-bottom: #{spacing('4')};
+    line-height: #{line-height('tight')};
+    animation: slideUp 0.6s ease-out;
+
+    @include mobile {
+      font-size: #{font-size('2xl')};
+      text-align: center;
+    }
+  }
+
+  .section-description {
+    font-size: #{font-size('lg')};
+    line-height: #{line-height('relaxed')};
+    color: map-get(map-get(map-get($colors, 'neutral'), 'gray'), '700');
+    margin-bottom: #{spacing('8')};
+    max-width: 540px;
+    animation: slideUp 0.6s ease-out 0.2s backwards;
+
+    @include mobile {
+      font-size: #{font-size('base')};
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: #{spacing('6')};
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: #{spacing('4')};
+    }
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: #{spacing('4')};
+    text-align: left;
+    padding: #{spacing('4')};
+    border-radius: #{radius('lg')};
+    background: rgba(color('neutral', 'white'), 0.8);
+    transition: map-get($transitions, 'base');
+    animation: fadeIn 0.6s ease-out backwards;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1 + 0.3}s;
+      }
+    }
+
+    &.active {
+      transform: translateY(-5px);
+      background: color('neutral', 'white');
+      box-shadow: #{shadow('lg')};
+
+      .feature-icon {
+        background: rgba(color('primary'), 0.1);
+        transform: scale(1.1);
+      }
+    }
+
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(color('primary'), 0.05);
+      color: color('primary');
+      flex-shrink: 0;
+      transition: map-get($transitions, 'base');
+    }
+
+    .feature-text {
+      .feature-title {
+        font-weight: #{font-weight('semibold')};
+        color: color('neutral', 'black');
+        line-height: #{line-height('normal')};
+      }
+
+      .feature-subtitle {
+        color: map-get(map-get(map-get($colors, 'neutral'), 'gray'), '700');
+        font-size: #{font-size('sm')};
+      }
+    }
+  }
+
+  .right-content {
+    animation: slideIn 0.6s ease-out 0.4s backwards;
+
+    .checklist {
+      background: color('neutral', 'white');
+      border-radius: #{radius('lg')};
+      overflow: hidden;
+      box-shadow: #{shadow('lg')};
+
+      &-header {
+        background: color('neutral', 'black');
+        padding: #{spacing('4')};
+        border-bottom: 1px solid rgba(color('neutral', 'white'), 0.1);
+
+        h3 {
+          font-size: #{font-size('lg')};
+          font-weight: #{font-weight('semibold')};
+          color: color('neutral', 'white');
+          margin: 0;
+        }
+      }
+
+      &-items {
+        padding: #{spacing('4')};
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: #{spacing('3')};
+        padding: #{spacing('3')} 0;
+        border-bottom: 1px solid rgba(color('neutral', 'black'), 0.1);
+        color: map-get(map-get(map-get($colors, 'neutral'), 'gray'), '700');
+        font-size: #{font-size('base')};
+        animation: slideUp 0.4s ease-out backwards;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.completed {
+          color: color('neutral', 'black');
+
+          .check-icon {
+            color: color('primary');
+            animation: checkmark 0.3s ease-out backwards;
+          }
+        }
+
+        .empty-check {
+          width: 20px;
+          height: 20px;
+          border: 2px solid rgba(color('neutral', 'black'), 0.2);
+          border-radius: 50%;
+          transition: map-get($transitions, 'base');
+
+          &:hover {
+            border-color: color('primary');
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

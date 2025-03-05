@@ -1,0 +1,140 @@
+@import 'theme';
+
+// Media Queries
+@mixin mobile {
+  @media (max-width: #{breakpoint('md')}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{breakpoint('md')}) and (max-width: #{breakpoint('lg')}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{breakpoint('lg')}) {
+    @content;
+  }
+}
+
+// Layout
+@mixin container {
+  width: 100%;
+  max-width: #{breakpoint('xl')};
+  margin: 0 auto;
+  padding: 0 #{spacing('4')};
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Typography
+@mixin heading-1 {
+  font-size: #{font-size('4xl')};
+  font-weight: #{font-weight('bold')};
+  line-height: #{line-height('tight')};
+}
+
+@mixin heading-2 {
+  font-size: #{font-size('3xl')};
+  font-weight: #{font-weight('bold')};
+  line-height: #{line-height('snug')};
+}
+
+@mixin heading-3 {
+  font-size: #{font-size('2xl')};
+  font-weight: #{font-weight('semibold')};
+  line-height: #{line-height('normal')};
+}
+
+@mixin body-text {
+  font-size: #{font-size('base')};
+  line-height: #{line-height('relaxed')};
+}
+
+// Buttons
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: #{spacing('2')} #{spacing('6')};
+  border-radius: #{radius('2xl')};
+  font-weight: #{font-weight('medium')};
+  transition: map-get($transitions, 'base');
+  cursor: pointer;
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: gradient('primary');
+  color: color('neutral', 'white');
+  border: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: shadow('lg');
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  color: color('neutral', 'white');
+  border: 1px solid rgba(color('neutral', 'white'), 0.3);
+
+  &:hover {
+    background: rgba(color('neutral', 'white'), 0.1);
+  }
+}
+
+// Cards
+@mixin card {
+  background: color('neutral', 'white');
+  border-radius: radius('lg');
+  padding: spacing('6');
+  box-shadow: shadow('md');
+  transition: map-get($transitions, 'base');
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: shadow('xl');
+  }
+}
+
+// Animations
+@mixin fade-in {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@mixin slide-up {
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: slideUp 0.3s ease-in-out;
+}

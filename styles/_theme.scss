@@ -1,0 +1,210 @@
+// Brand Colors
+$colors: (
+  'primary': (
+    'base': #F03F3F,
+    'dark': #912121,
+    'light': #FF1919
+  ),
+  'neutral': (
+    'black': #09080A,
+    'white': #FFFFFF,
+    'gray': (
+      100: #F5F5F5,
+      200: #EEEEEE,
+      300: #E0E0E0,
+      400: #BDBDBD,
+      500: #9E9E9E,
+      600: #757575,
+      700: #616161,
+      800: #424242,
+      900: #212121
+    )
+  )
+);
+
+// Gradients
+$gradients: (
+  'primary': linear-gradient(91.2deg, map-get(map-get($colors, 'primary'), 'light') 0.19%, map-get(map-get($colors, 'primary'), 'dark') 66.17%),
+  'black': linear-gradient(135deg, map-get(map-get($colors, 'neutral'), 'black'), lighten(map-get(map-get($colors, 'neutral'), 'black'), 10%))
+);
+
+// Typography
+$typography: (
+  'family': (
+    'base': ('Inter', sans-serif)
+  ),
+  'size': (
+    'xs': 0.75rem,    // 12px
+    'sm': 0.875rem,   // 14px
+    'base': 1rem,     // 16px
+    'lg': 1.125rem,   // 18px
+    'xl': 1.25rem,    // 20px
+    '2xl': 1.5rem,    // 24px
+    '3xl': 2rem,      // 32px
+    '4xl': 2.5rem,    // 40px
+    '5xl': 3rem       // 48px
+  ),
+  'weight': (
+    'normal': 400,
+    'medium': 500,
+    'semibold': 600,
+    'bold': 700,
+    'extrabold': 800
+  ),
+  'line-height': (
+    'tight': 1.2,
+    'snug': 1.375,
+    'normal': 1.5,
+    'relaxed': 1.625,
+    'loose': 2
+  )
+);
+
+// Spacing
+$spacing: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem
+);
+
+// Breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
+
+// Z-index
+$z-index: (
+  'dropdown': 1000,
+  'sticky': 1020,
+  'fixed': 1030,
+  'modal-backdrop': 1040,
+  'modal': 1050,
+  'popover': 1060,
+  'tooltip': 1070
+);
+
+// Border Radius
+$radius: (
+  'sm': 0.25rem,
+  'base': 0.5rem,
+  'lg': 1rem,
+  'xl': 1.5rem,
+  '2xl': 2rem,
+  'full': 9999px
+);
+
+// Shadows
+$shadows: (
+  'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+  'base': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+  'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
+  'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+  'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)'
+);
+
+// Transitions
+$transitions: (
+  'base': 'all 0.3s ease',
+  'fast': 'all 0.15s ease',
+  'slow': 'all 0.45s ease'
+);
+
+// Functions to access theme values
+@function color($key, $shade: 'base') {
+  @if map-has-key($colors, $key) {
+    $color: map-get($colors, $key);
+    @if type-of($color) == 'map' {
+      @if map-has-key($color, $shade) {
+        @return map-get($color, $shade);
+      }
+    }
+    @return $color;
+  }
+  @return null;
+}
+
+@function gradient($key) {
+  @return map-get($gradients, $key);
+}
+
+@function spacing($key) {
+  @return map-get($spacing, $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@function shadow($key) {
+  @return map-get($shadows, $key);
+}
+
+@function radius($key) {
+  @return map-get($radius, $key);
+}
+
+@function z($key) {
+  @return map-get($z-index, $key);
+}
+
+@function font-size($key) {
+  @return map-get(map-get($typography, 'size'), $key);
+}
+
+@function font-weight($key) {
+  @return map-get(map-get($typography, 'weight'), $key);
+}
+
+@function line-height($key) {
+  @return map-get(map-get($typography, 'line-height'), $key);
+}
+
+// Export commonly used values as CSS variables
+:root {
+  // Colors
+  --color-primary: #{color('primary')};
+  --color-primary-dark: #{color('primary', 'dark')};
+  --color-primary-light: #{color('primary', 'light')};
+  
+  // Neutral colors
+  --color-black: #{color('neutral', 'black')};
+  --color-white: #{color('neutral', 'white')};
+  
+  @each $key, $value in map-get(map-get($colors, 'neutral'), 'gray') {
+    --color-gray-#{$key}: #{$value};
+  }
+  
+  // Gradients
+  --gradient-primary: #{gradient('primary')};
+  --gradient-black: #{gradient('black')};
+  
+  // Typography
+  --font-family-base: #{map-get(map-get($typography, 'family'), 'base')};
+  
+  @each $key, $value in map-get($typography, 'size') {
+    --font-size-#{$key}: #{$value};
+  }
+  
+  // Spacing
+  @each $key, $value in $spacing {
+    --spacing-#{$key}: #{$value};
+  }
+  
+  // Border Radius
+  @each $key, $value in $radius {
+    --radius-#{$key}: #{$value};
+  }
+}

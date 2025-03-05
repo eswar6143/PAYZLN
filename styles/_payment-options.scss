@@ -1,0 +1,49 @@
+@import 'theme';
+
+.payment-options {
+  padding: #{spacing('20')} 0;
+  background-color: color('neutral', 'white');
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: #{spacing('8')};
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .option-card {
+    text-align: left;
+    padding: #{spacing('6')};
+
+    .option-icon {
+      margin-bottom: #{spacing('4')};
+      display: inline-block;
+
+      svg {
+        width: 48px;
+        height: 48px;
+        color: color('primary');
+      }
+    }
+
+    .option-title {
+      font-size: #{font-size('xl')};
+      font-weight: #{font-weight('semibold')};
+      color: color('neutral', 'black');
+      margin-bottom: #{spacing('4')};
+    }
+
+    .option-description {
+      color: map-get(map-get(map-get($colors, 'neutral'), 'gray'), '700');
+      line-height: #{line-height('relaxed')};
+      font-size: #{font-size('base')};
+    }
+  }
+}

@@ -1,0 +1,282 @@
+@import "theme";
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: #{spacing("1")} 0;
+  background-color: color("neutral", "black");
+  background-image: url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(color("neutral", "black"), 0.95) 0%,
+      rgba(color("neutral", "black"), 0.8) 50%,
+      rgba(color("neutral", "black"), 0.6) 100%
+    );
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-content {
+    position: relative;
+    display: grid;
+    gap: #{spacing("16")};
+    margin-bottom: 0;
+    padding-bottom: #{spacing("0")};
+    border-bottom: 2px solid rgba(#ff0000, 0.3);
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &-text {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &-title {
+    @include heading-1;
+    color: color("neutral", "white");
+    margin-bottom: #{spacing("6")};
+    font-size: 3.5rem;
+    line-height: 1.2;
+
+    .text-gradient {
+      background: linear-gradient(to right, #ff0000 0%, #ff6b6b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &-description {
+    font-size: #{font-size("lg")};
+    line-height: #{line-height("relaxed")};
+    color: rgba(color("neutral", "white"), 0.8);
+    margin-bottom: #{spacing("8")};
+    max-width: 600px;
+
+    @include mobile {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-cta {
+    display: flex;
+    gap: #{spacing("4")};
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    .button-primary {
+      background: #ff0000;
+      color: white;
+      padding: #{spacing("3")} #{spacing("6")};
+      border-radius: #{radius("full")};
+      font-weight: #{font-weight("medium")};
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #cc0000;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &-image {
+    position: relative;
+
+    .phone-mockup {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .woman-image {
+      position: relative;
+      width: 400px;
+      height: 550px;
+      border-radius: #{radius("xl")};
+      overflow: hidden;
+      z-index: 1;
+      box-shadow: #{shadow("xl")};
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .notification {
+      position: absolute;
+      top: 15%;
+      left: -50px;
+      background: rgba(color("primary"), 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: #{radius("lg")};
+      padding: #{spacing("4")};
+      width: 250px;
+      box-shadow: #{shadow("lg")};
+      z-index: 2;
+      border: 1px solid rgba(color("neutral", "white"), 0.1);
+      @include slide-up;
+
+      &-content {
+        color: color("neutral", "white");
+
+        h4 {
+          margin-bottom: #{spacing("2")};
+          font-weight: #{font-weight("semibold")};
+        }
+
+        p {
+          font-size: #{font-size("sm")};
+          margin-bottom: #{spacing("3")};
+          opacity: 0.8;
+        }
+
+        .buy-now-button {
+          background: color("primary");
+          color: color("neutral", "white");
+          border: none;
+          padding: #{spacing("2")} #{spacing("4")};
+          border-radius: #{radius("lg")};
+          font-size: #{font-size("sm")};
+          cursor: pointer;
+          transition: map-get($transitions, "base");
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: #{shadow("md")};
+          }
+        }
+      }
+    }
+
+    .logo-badge {
+      @include flex-center;
+      position: absolute;
+      bottom: 25%;
+      right: -30px;
+      background: rgba(color("neutral", "white"), 0.95);
+      border-radius: #{radius("full")};
+      padding: #{spacing("2")} #{spacing("4")};
+      gap: #{spacing("2")};
+      box-shadow: #{shadow("lg")};
+      z-index: 2;
+      @include slide-up;
+
+      .badge-text {
+        font-size: #{font-size("sm")};
+        font-weight: #{font-weight("semibold")};
+        color: color("neutral", "black");
+      }
+    }
+
+    .check-badge,
+    .refresh-badge {
+      @include flex-center;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: rgba(color("neutral", "white"), 0.95);
+      border-radius: #{radius("full")};
+      box-shadow: #{shadow("lg")};
+      z-index: 2;
+      @include slide-up;
+    }
+
+    .check-badge {
+      top: 35%;
+      right: 5%;
+    }
+
+    .refresh-badge {
+      bottom: 35%;
+      left: 5%;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: #{spacing("6")};
+    margin-top: #{spacing("1")};
+    margin-bottom: #{spacing("12")};
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: #{spacing("4")};
+    }
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: #{spacing("3")};
+    padding: #{spacing("1")};
+    background: rgba(color("neutral", "black"), 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: #{radius("base")};
+    transition: map-get($transitions, "base");
+
+    @include desktop {
+      padding: #{spacing("4")};
+      gap: #{spacing("4")};
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      background: rgba(color("neutral", "black"), 0.4);
+    }
+
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: color("primary");
+      flex-shrink: 0;
+    }
+
+    .feature-title {
+      color: color("neutral", "white");
+      font-size: #{font-size("sm")};
+      font-weight: #{font-weight("medium")};
+      margin: 0;
+      line-height: #{line-height("normal")};
+
+      @include desktop {
+        font-size: #{font-size("base")};
+      }
+    }
+  }
+}
+
+.floating-element {
+  transition: map-get($transitions, "base");
+}
