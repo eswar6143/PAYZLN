@@ -4,7 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: false,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   images: {
     unoptimized: true,

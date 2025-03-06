@@ -77,7 +77,7 @@ export default function PrivacyPage() {
               may include information such as:
             </p>
             <ul>
-              <li>Device's Internet Protocol (IP) address</li>
+              <li>Device&apos;s Internet Protocol (IP) address</li>
               <li>Browser type and version</li>
               <li>Pages visited and timing</li>
               <li>Mobile device information</li>
