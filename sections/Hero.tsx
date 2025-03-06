@@ -3,15 +3,6 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Bell,
-  CheckCircle,
-  RefreshCw,
-  Coins,
-  BarChart2,
-  Zap,
-  CreditCard,
-} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "../lib/i18n";
 
@@ -21,19 +12,47 @@ export default function Hero() {
 
   const features = [
     {
-      icon: <Coins size={24} />,
+      icon: (
+        <Image
+          src="/images/coins.svg"
+          alt="Money icon"
+          width={55}
+          height={38}
+        />
+      ),
       title: "features.items.money",
     },
     {
-      icon: <BarChart2 size={24} />,
+      icon: (
+        <Image
+          src="/images/bar-chart.svg"
+          alt="Insights icon"
+          width={45}
+          height={47}
+        />
+      ),
       title: "features.items.insights",
     },
     {
-      icon: <Zap size={24} />,
+      icon: (
+        <Image
+          src="/images/zap.svg"
+          alt="Integration icon"
+          width={40}
+          height={39}
+        />
+      ),
       title: "features.items.integration",
     },
     {
-      icon: <CreditCard size={24} />,
+      icon: (
+        <Image
+          src="/images/credit-card.svg"
+          alt="Flexibility icon"
+          width={40}
+          height={40}
+        />
+      ),
       title: "features.items.flexibility",
     },
   ];
@@ -62,9 +81,11 @@ export default function Hero() {
           <div className="hero-text">
             <h1 className="hero-title">
               <span className="text-gradient">{t("hero.title.part1")}</span>{" "}
-              {t("hero.title.part2")}
+              <span className="text-gradient">{t("hero.title.part2")}</span>
               <br />
-              {t("hero.title.part3")}{" "}
+              <span className="text-gradient">
+                {t("hero.title.part3")}
+              </span>{" "}
               <span className="text-gradient">{t("hero.title.part4")}</span>
             </h1>
             <p className="hero-description">{t("hero.description")}</p>
@@ -100,18 +121,12 @@ export default function Hero() {
 
               <div className="logo-badge floating-element">
                 <div className="logo-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM28.5 15C28.5 19.142 25.142 22.5 21 22.5H15V29H10V10H21C25.142 10 28.5 13.358 28.5 17.5V15Z"
-                      fill="#F03F3F"
-                    />
-                  </svg>
+                  <Image
+                    src="/images/payzln.svg"
+                    alt="Check icon"
+                    width={50}
+                    height={50}
+                  />
                 </div>
                 <div className="badge-text">
                   <span>{t("hero.badge")}</span>
@@ -119,11 +134,21 @@ export default function Hero() {
               </div>
 
               <div className="check-badge floating-element">
-                <CheckCircle size={24} color="#F03F3F" />
+                <Image
+                  src="/images/check-circle.svg"
+                  alt="Check icon"
+                  width={50}
+                  height={50}
+                />
               </div>
 
               <div className="refresh-badge floating-element">
-                <RefreshCw size={24} color="#F03F3F" />
+                <Image
+                  src="/images/refresh-cw.svg"
+                  alt="Refresh icon"
+                  width={50}
+                  height={50}
+                />
               </div>
             </div>
           </div>
