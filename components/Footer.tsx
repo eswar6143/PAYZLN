@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
-import { Linkedin, Send } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import '../lib/i18n';
+import Link from "next/link";
+import { useState } from "react";
+import { Linkedin, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import "../lib/i18n";
 
 interface NavLink {
   label: string;
@@ -23,30 +23,30 @@ interface FooterProps {
 }
 
 const defaultSocialLinks = [
-  { icon: <Linkedin size={20} />, href: 'https://linkedin.com' },
+  { icon: <Linkedin size={20} />, href: "https://linkedin.com" },
 ];
 
 const defaultNavLinks = [
-  { label: 'footer.links.about', href: '/about' },
-  { label: 'footer.links.privacy', href: '/privacy' },
-  { label: 'footer.links.terms', href: '/terms' },
-  { label: 'footer.links.contact', href: '/contact' },
+  { label: "footer.links.about", href: "/about" },
+  { label: "footer.links.privacy", href: "/privacy" },
+  { label: "footer.links.terms", href: "/terms" },
+  { label: "footer.links.contact", href: "/contact" },
 ];
 
 export default function Footer({
   socialLinks = defaultSocialLinks,
   navLinks = defaultNavLinks,
-  contactEmail = 'info@payzln.com',
+  contactEmail = "info@payzln.com",
 }: FooterProps) {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { t } = useTranslation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted email:', email);
+    console.log("Submitted email:", email);
     setIsSubmitted(true);
-    setEmail('');
+    setEmail("");
 
     setTimeout(() => {
       setIsSubmitted(false);
@@ -93,9 +93,7 @@ export default function Footer({
                 </svg>
               </div>
             </Link>
-            <p className="footer-description">
-              {t('footer.description')}
-            </p>
+            <p className="footer-description">{t("footer.description")}</p>
             <div className="social-links">
               {socialLinks.map((link, index) => (
                 <a
@@ -112,7 +110,7 @@ export default function Footer({
           </div>
 
           <div className="footer-nav">
-            <h3 className="footer-heading">{t('footer.quickLinks')}</h3>
+            <h3 className="footer-heading">{t("footer.quickLinks")}</h3>
             <ul className="footer-links">
               {navLinks.map((link, index) => (
                 <li key={index}>
@@ -123,9 +121,9 @@ export default function Footer({
           </div>
 
           <div className="footer-contact">
-            <h3 className="footer-heading">{t('footer.newsletter.title')}</h3>
+            <h3 className="footer-heading">{t("footer.newsletter.title")}</h3>
             <p className="contact-description">
-              {t('footer.newsletter.description')}
+              {t("footer.newsletter.description")}
             </p>
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
@@ -133,7 +131,7 @@ export default function Footer({
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder={t('footer.newsletter.placeholder')}
+                  placeholder={t("footer.newsletter.placeholder")}
                   required
                   className="email-input"
                 />
@@ -142,11 +140,14 @@ export default function Footer({
                 </button>
               </div>
               {isSubmitted && (
-                <p className="success-message">{t('footer.newsletter.success')}</p>
+                <p className="success-message">
+                  {t("footer.newsletter.success")}
+                </p>
               )}
             </form>
             <p className="contact-email">
-              {t('footer.newsletter.contact')} <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+              {t("footer.newsletter.contact")}{" "}
+              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
             </p>
           </div>
         </div>
@@ -158,10 +159,10 @@ export default function Footer({
         </div>
       </div>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .footer {
-          background-color: #09080A;
-          color: #FFFFFF;
+          background-color: #09080a;
+          color: #ffffff;
           padding: 4rem 0 2rem;
         }
 
@@ -169,7 +170,7 @@ export default function Footer({
           display: grid;
           grid-template-columns: 1fr;
           gap: 3rem;
-          
+
           @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
           }
@@ -187,7 +188,7 @@ export default function Footer({
         }
 
         .footer-description {
-          color: #AAAAAA;
+          color: #aaaaaa;
           margin-bottom: 1.5rem;
           line-height: 1.6;
         }
@@ -205,12 +206,12 @@ export default function Footer({
           height: 40px;
           border-radius: 50%;
           background-color: rgba(255, 255, 255, 0.1);
-          color: #FFFFFF;
+          color: #ffffff;
           transition: all 0.3s ease;
         }
 
         .social-link:hover {
-          background-color: #F03F3F;
+          background-color: #f03f3f;
           transform: translateY(-3px);
         }
 
@@ -218,7 +219,7 @@ export default function Footer({
           font-size: 1.25rem;
           font-weight: 600;
           margin-bottom: 1.5rem;
-          color: #FFFFFF;
+          color: #ffffff;
         }
 
         .footer-links {
@@ -229,16 +230,16 @@ export default function Footer({
         }
 
         .footer-links li a {
-          color: #AAAAAA;
+          color: #aaaaaa;
           transition: color 0.3s ease;
         }
 
         .footer-links li a:hover {
-          color: #F03F3F;
+          color: #f03f3f;
         }
 
         .contact-description {
-          color: #AAAAAA;
+          color: #aaaaaa;
           margin-bottom: 1.5rem;
           line-height: 1.6;
         }
@@ -254,7 +255,7 @@ export default function Footer({
           border: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 2rem 0 0 2rem;
           background-color: rgba(255, 255, 255, 0.05);
-          color: #FFFFFF;
+          color: #ffffff;
           outline: none;
         }
 
@@ -267,10 +268,10 @@ export default function Footer({
           align-items: center;
           justify-content: center;
           padding: 0.75rem 1.25rem;
-          background: linear-gradient(91.2deg, #FF1919 0.19%, #912121 66.17%);
+          background: linear-gradient(91.2deg, #ff1919 0.19%, #912121 66.17%);
           border: none;
           border-radius: 0 2rem 2rem 0;
-          color: #FFFFFF;
+          color: #ffffff;
           cursor: pointer;
           transition: all 0.3s ease;
         }
@@ -280,16 +281,16 @@ export default function Footer({
         }
 
         .success-message {
-          color: #4CAF50;
+          color: #4caf50;
           margin-bottom: 1rem;
         }
 
         .contact-email {
-          color: #AAAAAA;
+          color: #aaaaaa;
         }
 
         .contact-email a {
-          color: #F03F3F;
+          color: #f03f3f;
           transition: opacity 0.3s ease;
         }
 
@@ -314,7 +315,7 @@ export default function Footer({
             gap: 2rem;
           }
         }
-      `}</style>
+      `}</style> */}
     </footer>
   );
 }

@@ -1,0 +1,157 @@
+{
+  "header": {
+    "nav": {
+      "partner": "Associons",
+      "documentation": "API d'intégration"
+    },
+    "auth": {
+      "login": "Se connecter",
+      "signup": "S'inscrire"
+    }
+  },
+  "hero": {
+    "title": {
+      "part1": "Le plus intelligent",
+      "part2": "Moyen de",
+      "part3": "Gérer",
+      "part4": "Vos paiements"
+    },
+    "description": "Chez Payzln, nous comprenons que la gestion des paiements peut être complexe et longue. C'est pourquoi nous avons construit une passerelle de paiement qui traite de manière transparente les paiements, vous donnant la liberté de vous concentrer sur ce qui compte le plus - la croissance de votre entreprise.",
+    "cta": "Contactez-nous",
+    "notification": {
+      "greeting": "Hey Tanya,",
+      "message": "Nous espérons que vous aimez le toner de traitement du produit! Il est temps d'acheter le produit avec une remise exclusive pour vous",
+      "cta": "Acheter maintenant"
+    },
+    "badge": "Passerelle de paiement Payzln"
+  },
+  "features": {
+    "items": {
+      "money": "Gérez votre argent à votre façon",
+      "insights": "Aperçu pour alimenter votre entreprise",
+      "integration": "Une intégration facile à passer en quelques minutes",
+      "flexibility": "Flexibilité totale dans les modes de paiement"
+    }
+  },
+  "empowerment": {
+    "title": "Autonomiser les entreprises du monde entier",
+    "description": "Pay Zillion est conçu pour faciliter les paiements entre les utilisateurs finaux et les commerçants. Notre mission est de rendre les paiements accessibles et sans couture pour les entreprises de toutes tailles, peu importe où elles fonctionnent."
+  },
+  "paymentOptions": {
+    "items": {
+      "methods": {
+        "title": "Large gamme de méthodes de paiement",
+        "description": "Des options traditionnelles comme UPI, transfert bancaire (IMPS, NEFT, RTGS) aux solutions de pointe comme Fiat à Crypto et Crypto à Fiat."
+      },
+      "custom": {
+        "title": "Options de paiement personnalisées",
+        "description": "Personnalisez vos options de paiement en fonction de vos besoins commerciaux uniques et respectez les réglementations locales."
+      },
+      "offers": {
+        "title": "Offre de configuration",
+        "description": "Créez facilement des offres et des options EMI sans coût."
+      },
+      "international": {
+        "title": "Accepter les paiements internationaux",
+        "description": "Appuyez facilement sur les marchés mondiaux, avec les systèmes de paiement internationaux les mieux organisés."
+      }
+    }
+  },
+  "stats": {
+    "items": {
+      "merchants": {
+        "prefix": "",
+        "suffix": null,
+        "label": "Marchands",
+        "description": "Considéré par plus de 27 marchands dans le monde et en croissance!"
+      },
+      "transactions": {
+        "prefix": null,
+        "suffix": null,
+        "label": "Million de transactions",
+        "description": "Traitement des millions de transactions mensuellement"
+      },
+      "crypto": {
+        "prefix": null,
+        "suffix": null,
+        "label": "Milliards de crypto",
+        "description": "Gérer plus de 1b dans les transactions cryptographiques mensuellement"
+      }
+    },
+    "cta": "Contactez-nous"
+  },
+  "customers": {
+    "title": "Vos clients d'abord",
+    "description": "Parce que vos clients méritent un processus de paiement transparent et que vous méritez une chose de moins à vous soucier.",
+    "features": {
+      "money": "Processus de règlement sans risque à temps",
+      "links": "Création de liens de paiement flexible",
+      "options": "Choix d'une multitude d'options de paiement"
+    }
+  },
+  "suiteSpot": {
+    "title": "Votre spot de suite",
+    "description": "Lorsque vous vous associez à Payzln, vous avez accès à une puissante suite d'outils et de fonctionnalités conçues pour aider votre entreprise à prospérer.",
+    "features": {
+      "pos": "Logiciel de facturation POS pour la gestion de la vente au détail intelligente",
+      "app": "Payzln Gateway for Business App for On-the-Go Control",
+      "gateway": "Business Gateway pour une gestion simplifiée",
+      "international": "Choisissez parmi la meilleure pile de paiements internationaux",
+      "analytics": "Analyse avancée et rapport pour les informations basées sur les données"
+    }
+  },
+  "goLive": {
+    "title": "Allez vivre en quelques minutes!",
+    "description": "Avec une intégration facile, prenez vos paiements en direct en quelques minutes! Inscrivez-vous à une façon plus intelligente de gérer vos paiements.",
+    "features": {
+      "suite": {
+        "subtitle": "Accès à toute la suite de produits"
+      },
+      "onboarding": {
+        "subtitle": "Intégration rapide"
+      },
+      "options": {
+        "subtitle": "Choix d'une multitude d'options de paiement"
+      },
+      "support": {
+        "subtitle": "Support client 24 × 7"
+      }
+    },
+    "button": "Commencer",
+    "checklist": {
+      "title": "Liste de contrôle rapide",
+      "items": {
+        "account": "Créer un compte",
+        "verify": "Vérifiez votre entreprise",
+        "setup": "Configuration des méthodes de paiement",
+        "integrate": "Intégrer l'API",
+        "test": "Test des transactions",
+        "live": "Se mettre en vie"
+      }
+    }
+  },
+  "footer": {
+    "description": "La façon la plus intelligente de gérer vos paiements. Traitez de manière transparente les paiements et se concentrez-vous sur la croissance de votre entreprise.",
+    "quickLinks": "Liens rapides",
+    "links": {
+      "about": "À propos de nous",
+      "privacy": "politique de confidentialité",
+      "terms": "Conditions de service",
+      "contact": "Contact"
+    },
+    "newsletter": {
+      "title": "Restez à jour",
+      "description": "Abonnez-vous à notre newsletter pour les dernières mises à jour et offres.",
+      "placeholder": "Votre adresse e-mail",
+      "success": "Merci de vous abonner!",
+      "contact": "Contactez-nous:"
+    }
+  },
+  "languages": {
+    "en": "Anglais",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch"
+  }
+}

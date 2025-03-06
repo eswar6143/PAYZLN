@@ -26,6 +26,10 @@
       grid-template-columns: 1fr;
       gap: #{spacing("6")};
     }
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: #{spacing("6")};
+    }
   }
 
   .text-content {

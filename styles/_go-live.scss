@@ -127,6 +127,9 @@
     @include desktop {
       padding: 0 #{spacing("8")};
     }
+    @include tablet {
+      padding: 0 #{spacing("16")};
+    }
 
     .checklist {
       background: color("neutral", "white");

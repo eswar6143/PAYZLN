@@ -1,0 +1,157 @@
+{
+  "header": {
+    "nav": {
+      "partner": "Vamos a asociarnos",
+      "documentation": "API de integración"
+    },
+    "auth": {
+      "login": "Acceso",
+      "signup": "Inscribirse"
+    }
+  },
+  "hero": {
+    "title": {
+      "part1": "Lo más inteligente",
+      "part2": "Camino a",
+      "part3": "Administrar",
+      "part4": "Tus pagos"
+    },
+    "description": "En Payzln, entendemos que la gestión de pagos puede ser complejo y lento. Es por eso que hemos creado una pasarela de pago que procesa a la perfección los pagos, lo que le brinda la libertad de concentrarse en lo que más importa: hacer crecer su negocio.",
+    "cta": "Contáctenos",
+    "notification": {
+      "greeting": "Hola Tanya,",
+      "message": "¡Esperamos que te guste el tóner de tratamiento de productos! Es hora de comprar el producto con un descuento exclusivo para usted",
+      "cta": "Comprar ahora"
+    },
+    "badge": "Pasarela de pago de payzln"
+  },
+  "features": {
+    "items": {
+      "money": "Administre su dinero a su manera",
+      "insights": "Insight para impulsar su negocio",
+      "integration": "Integración fácil para vivir en minutos",
+      "flexibility": "Flexibilidad total en los modos de pago"
+    }
+  },
+  "empowerment": {
+    "title": "Empoderando a las empresas en todo el mundo",
+    "description": "Pay Zillion está diseñado para facilitar los pagos entre usuarios finales y comerciantes. Nuestra misión es hacer que los pagos sean accesibles y sin problemas para empresas de todos los tamaños, sin importar dónde operen."
+  },
+  "paymentOptions": {
+    "items": {
+      "methods": {
+        "title": "Amplia gama de métodos de pago",
+        "description": "Desde opciones tradicionales como UPI, transferencia bancaria (Imps, NEFT, RTGS) hasta soluciones de vanguardia como Fiat, Crypto y Crypto to Fiat."
+      },
+      "custom": {
+        "title": "Opciones de pago personalizadas",
+        "description": "Personalice sus opciones de pago para satisfacer sus necesidades comerciales únicas y cumplir con las regulaciones locales."
+      },
+      "offers": {
+        "title": "Oferta de configuración",
+        "description": "Cree ofertas y opciones de EMI sin costo fácilmente."
+      },
+      "international": {
+        "title": "Aceptar pagos internacionales",
+        "description": "Aproveche los mercados globales con facilidad, con los mejores sistemas de pagos internacionales curados."
+      }
+    }
+  },
+  "stats": {
+    "items": {
+      "merchants": {
+        "prefix": "",
+        "suffix": "+",
+        "label": "Comerciantes",
+        "description": "¡Confianza por más de 27 comerciantes en todo el mundo y en crecimiento!"
+      },
+      "transactions": {
+        "prefix": null,
+        "suffix": "+",
+        "label": "Millones de transacciones",
+        "description": "Procesar millones en transacciones mensualmente"
+      },
+      "crypto": {
+        "prefix": null,
+        "suffix": "+",
+        "label": "Mil millones en cripto",
+        "description": "Manejo de más de 1B en transacciones criptográficas mensualmente"
+      }
+    },
+    "cta": "Contáctenos"
+  },
+  "customers": {
+    "title": "Primero sus clientes",
+    "description": "Porque sus clientes merecen un proceso de pago sin problemas, y usted merece una cosa menos de qué preocuparse.",
+    "features": {
+      "money": "Proceso de liquidación sin riesgos a tiempo, sin riesgos",
+      "links": "Creación de enlaces de pago flexibles",
+      "options": "Elección de una multitud de opciones de pago"
+    }
+  },
+  "suiteSpot": {
+    "title": "Tu lugar de suite",
+    "description": "Cuando se asocia con PayZln, obtiene acceso a un poderoso conjunto de herramientas y características diseñadas para ayudar a que su negocio prospere.",
+    "features": {
+      "pos": "Software de facturación POS para gestión minorista inteligente",
+      "app": "Payzln Gateway para la aplicación comercial para el control sobre la marcha",
+      "gateway": "Business Gateway para gestión simplificada",
+      "international": "Elija entre la pila de pagos mejores internacionales",
+      "analytics": "Análisis avanzado e informes para ideas basadas en datos"
+    }
+  },
+  "goLive": {
+    "title": "¡Ve a vivir en minutos!",
+    "description": "Con una fácil integración, ¡tome sus pagos en vivo en minutos! Regístrese para una manera más inteligente de administrar sus pagos.",
+    "features": {
+      "suite": {
+        "subtitle": "Acceso a toda la suite de productos"
+      },
+      "onboarding": {
+        "subtitle": "Incorporación rápida"
+      },
+      "options": {
+        "subtitle": "Elección de una multitud de opciones de pago"
+      },
+      "support": {
+        "subtitle": "Atención al cliente 24 × 7"
+      }
+    },
+    "button": "Empezar",
+    "checklist": {
+      "title": "Lista de verificación de incorporación rápida",
+      "items": {
+        "account": "Crear una cuenta",
+        "verify": "Verifique su negocio",
+        "setup": "Configurar métodos de pago",
+        "integrate": "Integrar API",
+        "test": "Transacciones de prueba",
+        "live": "Ir a vivir"
+      }
+    }
+  },
+  "footer": {
+    "description": "La forma más inteligente de administrar sus pagos. Procese a la perfección los pagos y concéntrese en hacer crecer su negocio.",
+    "quickLinks": "Enlaces rápidos",
+    "links": {
+      "about": "Sobre nosotros",
+      "privacy": "política de privacidad",
+      "terms": "Términos de servicio",
+      "contact": "Contacto"
+    },
+    "newsletter": {
+      "title": "Mantente actualizado",
+      "description": "Suscríbase a nuestro boletín para obtener las últimas actualizaciones y ofertas.",
+      "placeholder": "Su dirección de correo electrónico",
+      "success": "¡Gracias por suscribirse!",
+      "contact": "Contáctenos:"
+    }
+  },
+  "languages": {
+    "en": "Inglés",
+    "ru": "Русий",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch"
+  }
+}

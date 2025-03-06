@@ -1,0 +1,157 @@
+{
+  "header": {
+    "nav": {
+      "partner": "Lassen Sie uns Partner",
+      "documentation": "Integrations -API"
+    },
+    "auth": {
+      "login": "Einloggen",
+      "signup": "Melden Sie sich an"
+    }
+  },
+  "hero": {
+    "title": {
+      "part1": "Am schlauer",
+      "part2": "Weg zu",
+      "part3": "Verwalten",
+      "part4": "Ihre Zahlungen"
+    },
+    "description": "Bei Payzln verstehen wir, dass die Verwaltung von Zahlungen komplex und zeitaufwändig sein kann. Aus diesem Grund haben wir ein Zahlungsgateway erstellt, das die Zahlungen nahtlos verarbeitet und Ihnen die Freiheit gibt, uns auf das zu konzentrieren, was am wichtigsten ist - Ihr Geschäft aus dem Weg zu bringen.",
+    "cta": "Kontaktieren Sie uns",
+    "notification": {
+      "greeting": "Hey Tanya,",
+      "message": "Wir hoffen, dass Sie den Produktbehandlungstoner lieben! Es ist Zeit, das Produkt mit einem exklusiven Rabatt für Sie zu kaufen",
+      "cta": "Jetzt kaufen"
+    },
+    "badge": "Payzln Payment Gateway"
+  },
+  "features": {
+    "items": {
+      "money": "Verwalten Sie Ihr Geld auf Ihren Weg",
+      "insights": "Einblick, Ihr Geschäft zu betreiben",
+      "integration": "Einfache Integration, um in Minuten live zu gehen",
+      "flexibility": "Gesamtflexibilität bei Zahlungsmodi"
+    }
+  },
+  "empowerment": {
+    "title": "Unternehmen weltweit ermächtigen",
+    "description": "Pay Zillion wurde entwickelt, um Zahlungen zwischen Endbenutzern und Händlern zu erleichtern. Unsere Mission ist es, Zahlungen für Unternehmen aller Größen zugänglich und nahtlos zugänglich zu machen, unabhängig davon, wo sie tätig sind."
+  },
+  "paymentOptions": {
+    "items": {
+      "methods": {
+        "title": "Breites Angebot an Zahlungsmethoden",
+        "description": "Von traditionellen Optionen wie UPI, Bankübertragung (IMPS, Neft, RTGs) bis hin zu hochmodernen Lösungen wie Fiat bis hin zu Krypto und Krypto bis hin zu Fiat."
+      },
+      "custom": {
+        "title": "Customized Zahlungsoptionen",
+        "description": "Passen Sie Ihre Zahlungsoptionen an Ihre einzigartigen Geschäftsanforderungen an und entsprechen den lokalen Vorschriften."
+      },
+      "offers": {
+        "title": "Setup -Angebot",
+        "description": "Erstellen Sie Angebote und kostengünstige EMI-Optionen problemlos."
+      },
+      "international": {
+        "title": "Internationale Zahlungen akzeptieren",
+        "description": "Nutzen Sie die globalen Märkte mühelos mit den am besten kuratierten internationalen Zahlungssystemen."
+      }
+    }
+  },
+  "stats": {
+    "items": {
+      "merchants": {
+        "prefix": "",
+        "suffix": null,
+        "label": "Kaufleute",
+        "description": "Vertrauen Sie von über 27 Händlern weltweit und wachsen!"
+      },
+      "transactions": {
+        "prefix": null,
+        "suffix": null,
+        "label": "Millionen Transaktion",
+        "description": "Verarbeitung von Millionen in Transaktionen monatlich"
+      },
+      "crypto": {
+        "prefix": null,
+        "suffix": null,
+        "label": "Milliarden in Krypto",
+        "description": "Umgang mit mehr als 1B in Krypto -Transaktionen monatlich"
+      }
+    },
+    "cta": "Kontaktieren Sie uns"
+  },
+  "customers": {
+    "title": "Ihre Kunden zuerst",
+    "description": "Weil Ihre Kunden einen nahtlosen Zahlungsprozess verdienen und Sie eine Sache weniger verdienen, um die Sie sich Sorgen machen müssen.",
+    "features": {
+      "money": "Pünktlich, risikofreier Abwicklungsprozess",
+      "links": "Flexible Zahlungsverbindlichkeitserstellung",
+      "options": "Auswahl aus einer Vielzahl von Zahlungsoptionen"
+    }
+  },
+  "suiteSpot": {
+    "title": "Ihr Suite -Spot",
+    "description": "Wenn Sie mit PayZLN zusammenarbeiten, erhalten Sie Zugriff auf eine leistungsstarke Reihe von Tools und Funktionen, mit denen Ihr Unternehmen gedeihen kann.",
+    "features": {
+      "pos": "POS -Abrechnungssoftware für intelligentes Einzelhandelsmanagement",
+      "app": "Payzln Gateway für Business App für die Kontrolle der One-the-Go",
+      "gateway": "Business Gateway für vereinfachtes Management",
+      "international": "Wählen Sie aus dem besten internationalen Zahlungsstapel",
+      "analytics": "Erweiterte Analyse und Berichterstattung für datengesteuerte Erkenntnisse"
+    }
+  },
+  "goLive": {
+    "title": "Geh in wenigen Minuten leben!",
+    "description": "Nehmen Sie Ihre Zahlungen mit einfacher Integration in Minuten live! Melden Sie sich für eine intelligentere Möglichkeit an, Ihre Zahlungen zu verwalten.",
+    "features": {
+      "suite": {
+        "subtitle": "Zugang zur gesamten Produktsuite"
+      },
+      "onboarding": {
+        "subtitle": "Schnelles Onboarding"
+      },
+      "options": {
+        "subtitle": "Auswahl aus einer Vielzahl von Zahlungsoptionen"
+      },
+      "support": {
+        "subtitle": "24 × 7 Kundensupport"
+      }
+    },
+    "button": "Fangen an",
+    "checklist": {
+      "title": "Schnelle Onboarding -Checkliste",
+      "items": {
+        "account": "Ein Konto erstellen",
+        "verify": "Überprüfen Sie Ihr Geschäft",
+        "setup": "Zahlungsmethoden einrichten",
+        "integrate": "API integrieren",
+        "test": "Testtransaktionen",
+        "live": "Geh lebe"
+      }
+    }
+  },
+  "footer": {
+    "description": "Der intelligentere Weg, um Ihre Zahlungen zu verwalten. Verarbeiten Sie die Zahlungen nahtlos und konzentrieren Sie sich auf das Wachstum Ihres Geschäfts.",
+    "quickLinks": "Schnelle Links",
+    "links": {
+      "about": "Über uns",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "contact": "Kontakt"
+    },
+    "newsletter": {
+      "title": "Bleib aktualisiert",
+      "description": "Abonnieren Sie unseren Newsletter für die neuesten Updates und Angebote.",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "success": "Vielen Dank für das Abonnieren!",
+      "contact": "Kontaktieren Sie uns:"
+    }
+  },
+  "languages": {
+    "en": "Englisch",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch"
+  }
+}

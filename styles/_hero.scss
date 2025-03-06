@@ -114,7 +114,7 @@
   }
 
   &-description {
-    @include content-large;
+    @include content-small;
     color: rgba(color("neutral", "white"), 0.8);
     margin-bottom: #{spacing("6")};
     max-width: 600px;
