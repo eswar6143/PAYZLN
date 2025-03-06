@@ -69,19 +69,7 @@
     }
 
     .stat-prefix,
-    .stat-suffix {
-      font-size: #{font-size("5xl")};
-      font-weight: #{font-weight("bold")};
-      background: linear-gradient(to right, #ff1919 19%, #912121 67%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-
-      @include mobile {
-        font-size: #{font-size("4xl")};
-      }
-    }
-
+    .stat-suffix,
     .stat-number {
       font-size: #{font-size("5xl")};
       font-weight: #{font-weight("bold")};
@@ -89,11 +77,15 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin: 0 0.1em;
+      transition: all 0.1s ease-out;
 
       @include mobile {
         font-size: #{font-size("4xl")};
       }
+    }
+
+    .stat-number {
+      margin: 0 0.1em;
     }
   }
 

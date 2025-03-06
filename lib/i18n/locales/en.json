@@ -61,21 +61,18 @@
     "items": {
       "merchants": {
         "prefix": "",
-        "value": "27",
         "suffix": "+",
         "label": "Merchants",
         "description": "Trusted by over 27 merchants worldwide and growing!"
       },
       "transactions": {
         "prefix": "$",
-        "value": "2.4",
         "suffix": "+",
         "label": "Million transaction",
         "description": "Processing millions in transactions monthly"
       },
       "crypto": {
         "prefix": "€",
-        "value": "1.2",
         "suffix": "+",
         "label": "Billion in Crypto",
         "description": "Handling more than 1B in crypto transactions monthly"
