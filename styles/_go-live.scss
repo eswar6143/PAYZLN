@@ -124,7 +124,10 @@
 
   .right-content {
     animation: slideIn 0.6s ease-out 0.4s backwards;
-    padding: 0 #{spacing("8")};
+    @include desktop {
+      padding: 0 #{spacing("8")};
+    }
+
     .checklist {
       background: color("neutral", "white");
       border-radius: #{radius("lg")};

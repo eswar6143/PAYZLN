@@ -75,7 +75,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" ref={heroRef}>
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
@@ -106,6 +106,16 @@ export default function Hero() {
                     {t("hero.notification.cta")}
                   </button>
                 </div>
+              </div>
+
+              <div className="bell-badge floating-element">
+                <Image
+                  src="/images/bell-circle.svg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  priority
+                />
               </div>
 
               <div className="woman-image">

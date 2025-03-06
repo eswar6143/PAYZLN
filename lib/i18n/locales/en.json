@@ -69,14 +69,14 @@
       "transactions": {
         "prefix": "$",
         "value": "2.4",
-        "suffix": "M+",
+        "suffix": "+",
         "label": "Million transaction",
         "description": "Processing millions in transactions monthly"
       },
       "crypto": {
         "prefix": "€",
         "value": "1.2",
-        "suffix": "B+",
+        "suffix": "+",
         "label": "Billion in Crypto",
         "description": "Handling more than 1B in crypto transactions monthly"
       }

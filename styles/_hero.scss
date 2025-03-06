@@ -205,8 +205,8 @@
       }
 
       @include desktop {
-        width: 400px;
-        height: 550px;
+        width: 590px;
+        height: 620px;
       }
 
       .image {
@@ -218,7 +218,7 @@
 
     .notification {
       position: absolute;
-      top: 15%;
+      top: 25%;
       left: 0;
       background: rgba(#f35858, 60);
       backdrop-filter: blur(10px);
@@ -250,6 +250,7 @@
         display: block;
         left: 0;
         width: 200px;
+        left: 5%;
       }
 
       @include desktop {
@@ -292,8 +293,8 @@
     .logo-badge {
       @include flex-center;
       position: absolute;
-      bottom: 25%;
-      right: -30px;
+      bottom: 30%;
+      right: -10%;
       padding: #{spacing("4")} #{spacing("6")};
       background: white;
       border-radius: #{radius("2xl")};
@@ -346,6 +347,7 @@
     }
 
     .check-badge,
+    .bell-badge,
     .refresh-badge {
       @include flex-center;
       position: absolute;
@@ -360,12 +362,30 @@
 
     .check-badge {
       top: 25%;
-      right: 15%;
+      right: 10%;
+
+      @include tablet {
+        right: 25%;
+      }
     }
 
     .refresh-badge {
-      bottom: 10%;
+      bottom: 15%;
+      left: 17%;
+
+      @include tablet {
+        left: 30%;
+        bottom: 15%;
+      }
+    }
+
+    .bell-badge {
       left: 15%;
+      top: 10%;
+
+      @include tablet {
+        left: 25%;
+      }
     }
   }
 
