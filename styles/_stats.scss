@@ -1,49 +1,53 @@
-@import 'theme';
+@import "theme";
 
 .stats {
-  padding: #{spacing('20')} 0;
-  background: color('neutral', 'white');
-  color: color('neutral', 'black');
+  padding: #{spacing("20")} 0;
+  background: color("neutral", "white");
+  color: color("neutral", "black");
   overflow: hidden;
 
   .container {
     @include container;
     max-width: 1200px;
-    padding: 0 #{spacing('4')};
+    padding: 0 #{spacing("4")};
   }
 
   .stats-wrapper {
-    background: color('neutral', 'white');
-    border-radius: #{radius('xl')};
-    padding: #{spacing('8')};
-    box-shadow: 0 20px 40px rgba(color('neutral', 'black'), 0.05);
+    background: color("neutral", "white");
+    border-radius: #{radius("xl")};
+    padding: #{spacing("8")};
+    box-shadow: 0 25px 50px -12px rgba(color("neutral", "black"), 0.15),
+      0 8px 24px -8px rgba(color("neutral", "black"), 0.1);
+    border: 1px solid rgba(color("neutral", "black"), 0.05);
   }
 
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: #{spacing('8')};
-    margin-bottom: #{spacing('8')};
+    gap: #{spacing("8")};
+    margin-bottom: #{spacing("8")};
 
     @include mobile {
       grid-template-columns: 1fr;
-      gap: #{spacing('6')};
+      gap: #{spacing("6")};
     }
   }
 
   .stat-card {
     text-align: left;
-    padding: #{spacing('4')};
-    
+    padding: #{spacing("4")};
+
     &:not(:last-child) {
       @include desktop {
-        border-right: 1px solid rgba(color('neutral', 'black'), 0.1);
+        border-right: 1px solid rgba(color("neutral", "black"), 0.1);
       }
     }
 
     @include mobile {
-      padding: #{spacing('4')} 0;
-      border-bottom: 1px solid rgba(color('neutral', 'black'), 0.1);
+      padding: #{spacing("4")} 0;
+      border-bottom: 1px solid rgba(color("neutral", "black"), 0.1);
+      text-align: center;
+      align-items: center;
 
       &:last-child {
         border-bottom: none;
@@ -58,69 +62,78 @@
   .stat-value {
     display: flex;
     align-items: baseline;
-    margin-bottom: #{spacing('4')};
+    margin-bottom: #{spacing("4")};
 
     .stat-prefix,
     .stat-suffix {
-      font-size: #{font-size('3xl')};
-      font-weight: #{font-weight('bold')};
-      color: color('primary', 'light');
+      font-size: #{font-size("5xl")};
+      font-weight: #{font-weight("bold")};
+      background: linear-gradient(to right, #ff1919 19%, #912121 67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
 
       @include mobile {
-        font-size: #{font-size('2xl')};
+        font-size: #{font-size("4xl")};
       }
     }
 
     .stat-number {
-      font-size: #{font-size('5xl')};
-      font-weight: #{font-weight('bold')};
-      color: color('primary', 'light');
+      font-size: #{font-size("5xl")};
+      font-weight: #{font-weight("bold")};
+      background: linear-gradient(to right, #ff1919 19%, #912121 67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin: 0 0.1em;
 
       @include mobile {
-        font-size: #{font-size('4xl')};
+        font-size: #{font-size("4xl")};
+        justify-content: center;
       }
     }
   }
 
   .stat-label {
-    font-size: #{font-size('xl')};
-    font-weight: #{font-weight('semibold')};
-    color: color('neutral', 'black');
-    margin-bottom: #{spacing('2')};
+    font-size: #{font-size("xl")};
+    font-weight: #{font-weight("semibold")};
+    color: color("neutral", "black");
+    margin-bottom: #{spacing("2")};
 
     @include mobile {
-      font-size: #{font-size('lg')};
+      font-size: #{font-size("lg")};
+      text-align: center;
     }
   }
 
   .stat-description {
-    font-size: #{font-size('base')};
-    color: map-get(map-get(map-get($colors, 'neutral'), 'gray'), '700');
-    line-height: #{line-height('relaxed')};
+    font-size: #{font-size("base")};
+    color: map-get(map-get(map-get($colors, "neutral"), "gray"), "700");
+    line-height: #{line-height("relaxed")};
     margin: 0;
 
     @include mobile {
-      font-size: #{font-size('sm')};
+      font-size: #{font-size("sm")};
+      text-align: center;
     }
   }
 
   .contact-button-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: #{spacing('8')};
+    margin-top: #{spacing("8")};
   }
 
   .contact-button {
-    background: color('primary', 'light');
-    color: color('neutral', 'white');
-    font-weight: #{font-weight('semibold')};
-    padding: #{spacing('3')} #{spacing('8')};
-    border-radius: #{radius('full')};
+    background: color("primary", "light");
+    color: color("neutral", "white");
+    font-weight: #{font-weight("semibold")};
+    padding: #{spacing("3")} #{spacing("8")};
+    border-radius: #{radius("full")};
     border: none;
     cursor: pointer;
-    transition: map-get($transitions, 'base');
-    font-size: #{font-size('base')};
+    transition: map-get($transitions, "base");
+    font-size: #{font-size("base")};
 
     @include mobile {
       width: 100%;
@@ -128,7 +141,7 @@
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(color('primary', 'light'), 0.2);
+      box-shadow: 0 10px 20px rgba(color("primary", "light"), 0.2);
     }
   }
 

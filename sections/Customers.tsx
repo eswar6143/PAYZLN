@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { CreditCard, Link as LinkIcon, List } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "../lib/i18n";
 
 interface Feature {
-  icon: React.ReactNode;
+  icon: string;
   translationKey: string;
 }
 
@@ -15,15 +14,15 @@ export default function Customers() {
 
   const features: Feature[] = [
     {
-      icon: <CreditCard className="text-primary" size={24} />,
+      icon: "/images/secure-card.svg",
       translationKey: "customers.features.money",
     },
     {
-      icon: <LinkIcon className="text-primary" size={24} />,
+      icon: "/images/timer.svg",
       translationKey: "customers.features.links",
     },
     {
-      icon: <List className="text-primary" size={24} />,
+      icon: "/images/multi-options.svg",
       translationKey: "customers.features.options",
     },
   ];
@@ -37,8 +36,21 @@ export default function Customers() {
             <p className="section-description">{t("customers.description")}</p>
             <div className="features-grid">
               {features.map((feature, index) => (
-                <div key={index} className="feature-card">
-                  <div className="feature-icon">{feature.icon}</div>
+                <div
+                  key={index}
+                  className={`feature-card ${
+                    index === 2 ? "feature-full" : ""
+                  }`}
+                >
+                  <div className="feature-icon">
+                    <Image
+                      src={feature.icon}
+                      alt=""
+                      width={66}
+                      height={66}
+                      priority
+                    />
+                  </div>
                   <h3 className="feature-title">{t(feature.translationKey)}</h3>
                 </div>
               ))}
@@ -47,7 +59,7 @@ export default function Customers() {
           <div className="image-content">
             <div className="image-wrapper">
               <Image
-                src="/images/sitting-woman.svg"
+                src="/images/sitting-woman.png"
                 alt="Happy customer using payment app"
                 width={600}
                 height={600}

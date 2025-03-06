@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { CreditCard, Settings, Percent, Globe } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import '../lib/i18n';
+import { useTranslation } from "react-i18next";
+import "../lib/i18n";
+import Image from "next/image";
 
 interface PaymentOption {
-  icon: React.ReactNode;
+  icon: string;
   titleKey: string;
   descriptionKey: string;
 }
@@ -15,25 +15,25 @@ export default function PaymentOptions() {
 
   const options: PaymentOption[] = [
     {
-      icon: <CreditCard size={32} className="text-primary" />,
+      icon: "/images/credit-card-2.svg",
       titleKey: "paymentOptions.items.methods.title",
-      descriptionKey: "paymentOptions.items.methods.description"
+      descriptionKey: "paymentOptions.items.methods.description",
     },
     {
-      icon: <Settings size={32} className="text-primary" />,
+      icon: "/images/settings.svg",
       titleKey: "paymentOptions.items.custom.title",
-      descriptionKey: "paymentOptions.items.custom.description"
+      descriptionKey: "paymentOptions.items.custom.description",
     },
     {
-      icon: <Percent size={32} className="text-primary" />,
+      icon: "/images/percent.svg",
       titleKey: "paymentOptions.items.offers.title",
-      descriptionKey: "paymentOptions.items.offers.description"
+      descriptionKey: "paymentOptions.items.offers.description",
     },
     {
-      icon: <Globe size={32} className="text-primary" />,
+      icon: "/images/global.svg",
       titleKey: "paymentOptions.items.international.title",
-      descriptionKey: "paymentOptions.items.international.description"
-    }
+      descriptionKey: "paymentOptions.items.international.description",
+    },
   ];
 
   return (
@@ -43,7 +43,14 @@ export default function PaymentOptions() {
           {options.map((option, index) => (
             <div key={index} className="option-card">
               <div className="option-icon">
-                {option.icon}
+                <Image
+                  src={option.icon}
+                  alt={t(option.titleKey)}
+                  width={96}
+                  height={96}
+                  priority={true}
+                  className="payment-icon"
+                />
               </div>
               <h3 className="option-title">{t(option.titleKey)}</h3>
               <p className="option-description">{t(option.descriptionKey)}</p>

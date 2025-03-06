@@ -10,6 +10,7 @@
 
   .container {
     position: relative;
+    padding: 0 #{spacing("12")};
 
     @include mobile {
       padding: 0;
@@ -29,7 +30,8 @@
 
   .text-content {
     @include mobile {
-      padding: 0 #{spacing("4")};
+      padding: 0 #{spacing("6")};
+      text-align: center;
     }
 
     .section-title {
@@ -40,6 +42,7 @@
       line-height: #{line-height("tight")};
 
       @include mobile {
+        text-align: center;
         font-size: #{font-size("2xl")};
         margin-bottom: #{spacing("3")};
       }
@@ -48,13 +51,16 @@
     .section-description {
       font-size: #{font-size("xl")};
       line-height: #{line-height("relaxed")};
-      color: map-get(map-get(map-get($colors, "neutral"), "gray"), "700");
+      color: #757575;
       margin-bottom: #{spacing("8")};
       max-width: 540px;
 
       @include mobile {
-        font-size: #{font-size("base")};
+        text-align: center;
+        font-size: #{font-size("lg")};
         margin-bottom: #{spacing("6")};
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
@@ -62,10 +68,10 @@
   .features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: #{spacing("4")};
+    gap: #{spacing("2")};
 
     @include mobile {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: #{spacing("4")};
     }
   }
@@ -75,33 +81,37 @@
     align-items: center;
     gap: #{spacing("4")};
     padding: #{spacing("4")};
-    border-radius: #{radius("base")};
+    border-radius: #{radius("lg")};
     transition: map-get($transitions, "base");
+    background: color("neutral", "white");
 
-    .feature-icon {
-      @include flex-center;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(color("primary"), 0.1);
-      flex-shrink: 0;
-
+    &.feature-full {
       @include mobile {
-        width: 40px;
-        height: 40px;
+        grid-column: 1 / -1;
       }
     }
 
+    .feature-icon {
+      flex-shrink: 0;
+    }
+
     .feature-title {
-      font-size: #{font-size("base")};
-      font-weight: #{font-weight("medium")};
+      font-size: #{font-size("sm")};
+      font-weight: #{font-weight("normal")};
       color: color("neutral", "black");
       margin: 0;
       line-height: #{line-height("normal")};
 
       @include mobile {
-        font-size: #{font-size("sm")};
+        text-align: center;
+        font-size: #{font-size("base")};
       }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
     }
   }
 
@@ -111,6 +121,9 @@
 
     @include mobile {
       margin-top: #{spacing("4")};
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .image-wrapper {
@@ -120,6 +133,10 @@
 
       @include mobile {
         min-height: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -127,8 +144,15 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: #{radius("lg")};
+
+      @include mobile {
+        position: relative;
+        width: auto;
+        max-width: 80%;
+        height: auto;
+      }
     }
 
     .image-overlay {
@@ -144,6 +168,12 @@
         transparent 70%
       );
       pointer-events: none;
+
+      @include mobile {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }

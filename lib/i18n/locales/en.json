@@ -64,7 +64,7 @@
         "value": "27",
         "suffix": "+",
         "label": "Merchants",
-        "description": "Trusted by over 25 merchants worldwide and growing!"
+        "description": "Trusted by over 27 merchants worldwide and growing!"
       },
       "transactions": {
         "prefix": "$",
@@ -78,7 +78,7 @@
         "value": "1.2",
         "suffix": "B+",
         "label": "Billion in Crypto",
-        "description": "Handling more than €1B in crypto transactions monthly"
+        "description": "Handling more than 1B in crypto transactions monthly"
       }
     },
     "cta": "Contact Us"

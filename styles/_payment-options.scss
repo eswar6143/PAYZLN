@@ -1,7 +1,7 @@
 @import "theme";
 
 .payment-options {
-  padding: #{spacing("12")} #{spacing("4")};
+  padding: #{spacing("8")} #{spacing("4")};
 
   @include tablet {
     padding: #{spacing("16")} #{spacing("6")};
@@ -16,7 +16,7 @@
   .options-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: #{spacing("6")};
+    gap: #{spacing("8")};
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
@@ -30,11 +30,13 @@
   }
 
   .option-card {
-    text-align: center;
+    text-align: left;
     padding: #{spacing("4")};
+    display: flex;
+    flex-direction: column;
+    gap: #{spacing("3")};
 
     @include tablet {
-      text-align: left;
       padding: #{spacing("5")};
     }
 
@@ -42,30 +44,53 @@
       padding: #{spacing("6")};
     }
 
+    @include mobile {
+      text-align: center;
+      align-items: center;
+    }
+
     .option-icon {
-      margin-bottom: #{spacing("4")};
+      margin-bottom: #{spacing("2")};
       display: inline-block;
 
       svg {
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
         color: color("primary");
+
+        @include tablet {
+          width: 48px;
+          height: 48px;
+        }
       }
     }
 
     .option-title {
-      font-size: #{font-size("lg")};
+      font-size: #{font-size("xl")};
+      font-weight: #{font-weight("semibold")};
+      margin-bottom: #{spacing("2")};
+      color: color("neutral", "black");
 
       @include tablet {
-        font-size: #{font-size("xl")};
+        font-size: #{font-size("2xl")};
+      }
+
+      @include mobile {
+        text-align: center;
       }
     }
 
     .option-description {
-      font-size: #{font-size("sm")};
+      font-size: #{font-size("base")};
+      line-height: #{line-height("normal")};
+      color: #757575;
 
       @include tablet {
-        font-size: #{font-size("base")};
+        font-size: #{font-size("lg")};
+      }
+
+      @include mobile {
+        text-align: center;
       }
     }
   }
