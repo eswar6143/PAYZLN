@@ -1,7 +1,7 @@
 @import "theme";
 
 .customers {
-  padding: #{spacing("20")} 0;
+  padding-bottom: #{spacing("10")};
   overflow: hidden;
 
   @include mobile {

@@ -1,7 +1,7 @@
 @import "theme";
 
 .stats {
-  padding: #{spacing("20")} 0;
+  padding-bottom: #{spacing("20")};
   background: color("neutral", "white");
   color: color("neutral", "black");
   overflow: hidden;

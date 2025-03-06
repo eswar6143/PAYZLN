@@ -1,15 +1,23 @@
 @import "theme";
 
 .suite-spot {
-  padding: #{spacing("20")} 0;
-  background-color: #fff1f1;
+  padding-bottom: #{spacing("10")};
+  background-color: white;
   overflow: hidden;
 
   .container {
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 #{spacing("4")};
   }
 
   .suite-content {
+    background: #fff1f1;
+    border-radius: #{radius("xl")};
+    padding: #{spacing("8")};
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
     display: grid;
     grid-template-columns: 1fr;
     gap: #{spacing("8")};

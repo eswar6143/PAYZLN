@@ -8,13 +8,14 @@ import {
   Headphones,
   CheckCircle,
   Lock,
+  Circle,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import "../lib/i18n";
 
 interface Feature {
-  icon: React.ReactNode;
-  titleKey: string;
+  icon: string;
   subtitleKey: string;
 }
 
@@ -30,23 +31,19 @@ export default function GoLive() {
 
   const features: Feature[] = [
     {
-      icon: <Package size={24} />,
-      titleKey: "goLive.features.suite.title",
+      icon: "/images/access-key.svg",
       subtitleKey: "goLive.features.suite.subtitle",
     },
     {
-      icon: <Rocket size={24} />,
-      titleKey: "goLive.features.onboarding.title",
+      icon: "/images/flexible.svg",
       subtitleKey: "goLive.features.onboarding.subtitle",
     },
     {
-      icon: <CreditCard size={24} />,
-      titleKey: "goLive.features.options.title",
+      icon: "/images/api-access.svg",
       subtitleKey: "goLive.features.options.subtitle",
     },
     {
-      icon: <Headphones size={24} />,
-      titleKey: "goLive.features.support.title",
+      icon: "/images/customer-support.svg",
       subtitleKey: "goLive.features.support.subtitle",
     },
   ];
@@ -133,15 +130,25 @@ export default function GoLive() {
             <div className="features-grid">
               {features.map((feature, index) => (
                 <div key={index} className="feature-item">
-                  <div className="feature-icon">{feature.icon}</div>
+                  <div className="feature-icon">
+                    <Image
+                      src={feature.icon}
+                      alt=""
+                      width={48}
+                      height={48}
+                      priority
+                    />
+                  </div>
                   <div className="feature-text">
-                    <div className="feature-title">{t(feature.titleKey)}</div>
-                    <div className="feature-subtitle">
+                    <div className="feature-title">
                       {t(feature.subtitleKey)}
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="cta-wrapper">
+              <button className="cta-button">{t("goLive.button")}</button>
             </div>
           </div>
 
@@ -157,7 +164,7 @@ export default function GoLive() {
                     className={`checklist-item ${
                       item.completed ? "completed" : ""
                     } ${item.locked ? "locked" : ""}`}
-                    onClick={() => toggleItem(item.id)}
+                    onClick={() => !item.locked && toggleItem(item.id)}
                     style={{
                       animationDelay: `${index * 0.1}s`,
                       cursor: item.locked ? "not-allowed" : "pointer",
@@ -166,16 +173,26 @@ export default function GoLive() {
                     <div className="item-content">
                       <div className="checkbox">
                         {item.completed ? (
-                          <CheckCircle size={20} className="check-icon" />
+                          <CheckCircle
+                            className="check-icon"
+                            size={20}
+                            strokeWidth={2.5}
+                          />
                         ) : (
-                          <div className="empty-check" />
+                          <Circle
+                            className="empty-check"
+                            size={20}
+                            strokeWidth={2}
+                          />
                         )}
                       </div>
                       <span className="item-text">
                         {t(item.translationKey)}
                       </span>
                     </div>
-                    {item.locked && <Lock size={18} className="lock-icon" />}
+                    {item.locked && (
+                      <Lock className="lock-icon" size={18} strokeWidth={2} />
+                    )}
                   </div>
                 ))}
               </div>
@@ -183,96 +200,6 @@ export default function GoLive() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .checklist-item {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 16px;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          transition: all 0.3s ease;
-          animation: slideIn 0.5s ease-out backwards;
-        }
-
-        .item-content {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .checklist-item:last-child {
-          border-bottom: none;
-        }
-
-        .checklist-item:not(.locked):hover {
-          background: rgba(240, 63, 63, 0.05);
-        }
-
-        .checklist-item.completed {
-          background: rgba(240, 63, 63, 0.05);
-        }
-
-        .checklist-item.locked {
-          opacity: 0.6;
-        }
-
-        .checkbox {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          border: 2px solid rgba(0, 0, 0, 0.2);
-          transition: all 0.3s ease;
-        }
-
-        .checklist-item:not(.locked):hover .checkbox {
-          border-color: #f03f3f;
-          transform: scale(1.1);
-        }
-
-        .check-icon {
-          color: #f03f3f;
-          animation: checkmark 0.3s ease-out;
-        }
-
-        .item-text {
-          flex: 1;
-          font-size: 16px;
-          color: #09080a;
-        }
-
-        .lock-icon {
-          color: rgba(0, 0, 0, 0.4);
-          margin-left: 12px;
-        }
-
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes checkmark {
-          0% {
-            transform: scale(0);
-          }
-          50% {
-            transform: scale(1.2);
-          }
-          100% {
-            transform: scale(1);
-          }
-        }
-      `}</style>
     </section>
   );
 }

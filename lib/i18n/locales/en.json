@@ -108,22 +108,19 @@
     "description": "With easy integration, take your payments live in minutes! Sign up for a smarter way to manage your payments.",
     "features": {
       "suite": {
-        "title": "Access to the",
-        "subtitle": "entire product suite"
+        "subtitle": "Access to the entire product suite"
       },
       "onboarding": {
-        "title": "Quick",
-        "subtitle": "onboarding"
+        "subtitle": "Quick onboarding"
       },
       "options": {
-        "title": "Choice from a",
-        "subtitle": "multitude of payment options"
+        "subtitle": "Choice from a multitude of payment options"
       },
       "support": {
-        "title": "24×7",
-        "subtitle": "support"
+        "subtitle": "24×7 customer support"
       }
     },
+    "button": "Get Started",
     "checklist": {
       "title": "Quick Onboarding Checklist",
       "items": {
