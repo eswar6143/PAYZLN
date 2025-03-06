@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import Header from "@/components/Header";
@@ -9,6 +10,14 @@ const Footer = dynamic(() => import("@/components/Footer"), {
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Payzln",
+  description: "Secure and flexible payment solutions for your business",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -16,6 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#FF0000" />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
