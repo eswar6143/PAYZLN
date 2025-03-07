@@ -119,7 +119,7 @@
     },
     "button": "Get Started",
     "checklist": {
-      "title": "Quick Onboarding Checklist",
+      "title": "Quick Onboarding",
       "items": {
         "account": "Create an account",
         "verify": "Verify your business",
@@ -152,7 +152,6 @@
     "ru": "Русский",
     "es": "Español",
     "fr": "Français",
-    "de": "Deutsch",
-    "zh": "中文"
+    "de": "Deutsch"
   }
 }
