@@ -27,10 +27,10 @@ const defaultSocialLinks = [
 ];
 
 const defaultNavLinks = [
-  { label: "footer.links.about", href: "/about" },
+  // { label: "footer.links.about", href: "/about" },
   { label: "footer.links.privacy", href: "/privacy" },
   { label: "footer.links.terms", href: "/terms" },
-  { label: "footer.links.contact", href: "/contact" },
+  // { label: "footer.links.contact", href: "/contact" },
 ];
 
 export default function Footer({

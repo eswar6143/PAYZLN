@@ -10,7 +10,7 @@ export default function TermsPage() {
       <div className="container">
         <div className="content-wrapper">
           <h1>Terms and Conditions</h1>
-          <p className="last-updated">Last Revised: June 02, 2024</p>
+          <p className="last-updated">Last Revised: March 10, 2025</p>
 
           <section className="terms-section">
             <p>
@@ -30,73 +30,74 @@ export default function TermsPage() {
               comprehended, and accepted these terms of service. You also agree
               to comply with all relevant laws and regulations.
             </p>
-          </section>
-
-          <section className="terms-section">
-            <h2>2. User Account and Registration</h2>
-            <ol>
-              <li>
-                You must be of legal age in your jurisdiction to use our
-                services.
-              </li>
-              <li>
-                You are responsible for maintaining the confidentiality of your
-                account and password.
-              </li>
-              <li>
-                You agree to provide accurate, current, and complete information
-                during registration.
-              </li>
-            </ol>
-          </section>
-
-          <section className="terms-section">
-            <h2>3. Service Usage</h2>
-            <ol>
-              <li>
-                You may only use our services for lawful and legitimate
-                purposes.
-              </li>
-              <li>
-                Engaging in illegal activities, such as fraud, money laundering,
-                or hacking, on Pay Zillion is strictly prohibited.
-              </li>
-              <li>
-                We reserve the right to terminate or suspend your account if we
-                suspect a violation of these terms.
-              </li>
-            </ol>
-          </section>
-
-          <section className="terms-section">
-            <h2>4. Fees and Payments</h2>
+            <h2>2. Service Usage</h2>
             <p>
-              Users agree to pay all applicable fees associated with the use of
-              Payzln services. Fees are subject to change with notice to users.
+              a. You may only use our services for lawful and legitimate
+              purposes. <br />
+              b. Engaging in illegal activities, such as fraud, money
+              laundering, or hacking, on Pay Zillion is strictly prohibited.
+              <br /> c. We reserve the right to terminate or suspend your
+              account if we suspect a violation of these terms.
             </p>
-          </section>
-
-          <section className="terms-section">
-            <h2>5. Privacy and Data Protection</h2>
+            <h2>3. Cryptocurrency Transactions</h2>
             <p>
-              We are committed to protecting your privacy and handling your data
-              in accordance with applicable data protection laws. For more
-              information, please refer to our Privacy Policy.
+              a. We are not liable for any losses due to the volatility or
+              fluctuations in cryptocurrency markets.
+              <br /> b. You are solely responsible for the security of your
+              cryptocurrency wallet.
             </p>
-          </section>
-
-          <section className="terms-section">
+            <h2>4. Data Privacy</h2>
+            <p>
+              a. We collect and process personal information as detailed in our
+              Privacy Policy.
+              <br /> b. By using our services, you consent to the collection,
+              use, and sharing of your information as described in our Privacy
+              Policy.
+            </p>
+            <h2>5. Intellectual Property Rights</h2>
+            <p>
+              a. All content on Pay Zillion, including text, graphics, logos,
+              and software, is protected by copyright and other intellectual
+              property rights.
+              <br /> b. You may not use, reproduce, or distribute our content
+              without prior written permission.
+            </p>
+            <h2>6. Disclaimer</h2>
+            <p>
+              a. We do not guarantee the accuracy, completeness, or reliability
+              of information on Pay Zillion. <br />
+              b. We do not provide financial or investment advice.
+            </p>
+            <h2>7. Limitation of Liability</h2>
+            <p>
+              We are not responsible for any direct or indirect damages,
+              including financial losses, arising from the use of Pay Zillion or
+              its services.
+            </p>
+            <h2>9. Indemnification</h2>
+            <p>
+              You agree to indemnify and hold us harmless from any claims,
+              damages, or liabilities arising from your use of Pay Zillion.
+            </p>
+            <h2>10. Modifications to Terms</h2>
+            <p>
+              We reserve the right to change these terms of service at any time.
+              It is your responsibility to review these terms periodically for
+              updates.
+            </p>
+            <h2>11. Governing Law</h2>
+            <p>
+              These terms are governed by the laws of the Canada. Any disputes
+              will be resolved in the courts of the Canada.{" "}
+            </p>
             <h2>12. Contact Information</h2>
             <p>
               For questions or concerns about these terms, please get in touch
-              with us at [contact@localhost] or through the Contact Us section
-              on our website.
-            </p>
-            <p>
-              By using Pay Zillion, you agree to comply with these terms. Please
-              read them carefully to ensure you understand and adhere to them.
+              with us at the Contact Us section on our website. By using Pay
+              Zillion, you agree to comply with these terms. Please read them
+              carefully to ensure you understand and adhere to them.
               Non-compliance may result in the termination of your account and
-              possible legal action.
+              possible legal action. has context menu
             </p>
           </section>
         </div>
